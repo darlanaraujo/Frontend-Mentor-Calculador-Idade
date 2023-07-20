@@ -3,9 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Estilo -->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- JS -->
+    <script src="js/script.js" defer></script>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/img/favicon-32x32.png" type="image/x-icon">
+    
     <title>Frontend Mentor - Calculador de Idade</title>
 </head>
 <body>
+    <main class="page">
+        <section class="modal">
+            <div class="box-input">
+                <label class="label">
+                    <legend class="legenda">DAY</legend>
+                    <input type="number" class="input" id="inputDia" placeholder="DD">
+                    <legend class="notificacao">notificação</legend>
+                </label>
+                <label class="label">
+                    <legend class="legenda">MONTH</legend>
+                    <input type="number" class="input" id="inputMes" placeholder="MM">
+                    <legend class="notificacao">notificação</legend>
+                </label>
+                <label class="label">
+                    <legend class="legenda">YEAR</legend>
+                    <input type="number" class="input" id="inputAno" placeholder="YYYY">
+                    <legend class="notificacao">notificação</legend>
+                </label>
+            </div>
+
+            <div class="box-botao">
+                <span class="linha"></span>
+                <a href="#" class="btn-calcular" id="btnCalcular">
+                    <img src="./assets/img/icon-arrow.svg" alt="">
+                </a>
+            </div>
+
+            <div class="box-resultado">
+                <label class="label-resultado">
+                    <p class="rs-anos" id="rsAnos">--</p>
+                    <p>YEARS</p>
+                </label>
+                <label class="label-resultado">
+                    <p class="rs-meses" id="rsMeses">--</p>
+                    <p>MONTHS</p>
+                </label>
+                <label class="label-resultado">
+                    <p class="rs-dias" id="rsDias">--</p>
+                    <p>DAYS</p>
+                </label>
+            </div>
+            
+        </section>
+    </main>
     
 </body>
 </html>

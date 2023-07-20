@@ -1,1 +1,23 @@
 @import 'padrao';
+
+.page {
+    width: 100%;
+    height: 100vh;
+    background-color: $fundo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal {
+        width: 840px;
+        height: 680px;
+        background-color: white;
+        border-radius: 15px 15px 250px 15px;
+
+        .box-input {
+            display: flex;
+            padding: 30px 40px;
+            gap: 20px;
+        }
+    }
+}
