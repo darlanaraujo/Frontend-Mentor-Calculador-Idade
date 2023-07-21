@@ -1,4 +1,6 @@
 @import 'padrao';
+@import 'fonts';
+@import 'mobile';
 
 .page {
     width: 100%;
@@ -7,17 +9,139 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Poppins-Regular;
 
     .modal {
         width: 840px;
-        height: 680px;
+        max-height: 680px;
         background-color: white;
         border-radius: 15px 15px 250px 15px;
+        margin: 20px;
+        padding: 30px 50px;
 
+        @include mobile {
+            padding: 30px;
+            border-radius: 15px 15px 150px 15px;
+        }
+
+        // Primeira Linha
         .box-input {
             display: flex;
-            padding: 30px 40px;
-            gap: 20px;
+            
+            gap: 30px;
+            color: $cinza;
+
+            @include mobile2 {
+                gap: 10px;
+            }
+
+            .legenda {
+                letter-spacing: 1.5px;
+            }
+
+            .input {
+                width: 160px;
+                height: 70px;
+                border: 1px solid $fundo;
+                border-radius: 10px;
+                font-family: Poppins-Bold;
+                font-size: 2em;
+                padding: 20px;
+                transition: 1s all;
+
+                @include mobile {
+                    width: 100%;
+                    height: 55px;
+                    font-size: 1.5em;
+                }
+
+                @include mobile2 {
+                    font-size: 1.3em;
+                }
+                
+                &:focus {
+                    outline: 1px solid $roxo;
+                }
+            }
+
+            .notificacao {
+                font-family: Poppins-Italic;
+            }
+
+            &.erro {
+                .legenda, .notificacao {
+                    color: $vermelho;
+                }
+            }
+        }
+
+        // Segunda Linha
+        .box-botao {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            
+            .linha {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background-color: $fundo;
+                
+            }
+
+            .btn-calcular {
+                width: 100px;
+                height: 90px;
+                background-color: $roxo;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                transition: .5s all;
+
+                @include mobile {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    width: 65px;
+                    height: 65px;
+                }
+
+                &:hover {
+                    background-color: black;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        // Terceira Linha
+        .box-resultado {
+
+            .label-resultado {
+                display: flex;
+                gap: 10px;
+                font-family: Poppins-ExtraBoldItalic;
+                font-size: 6em;
+                transition: 1s all;
+
+                // Mobile
+                @include mobile {
+                    font-size: 4em;
+                }
+
+                @include mobile2 {
+                    font-size: 3em;
+                }
+
+                .valores {
+                    color: $roxo;
+                }
+            }
         }
     }
 }

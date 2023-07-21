@@ -18,24 +18,26 @@
 <body>
     <main class="page">
         <section class="modal">
+            <!-- Primeira Linha -->
             <div class="box-input">
                 <label class="label">
                     <legend class="legenda">DAY</legend>
-                    <input type="number" class="input" id="inputDia" placeholder="DD">
+                    <input type="text" class="input" id="inputDia" placeholder="DD" maxlength="2" minlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
                     <legend class="notificacao">notificação</legend>
                 </label>
                 <label class="label">
                     <legend class="legenda">MONTH</legend>
-                    <input type="number" class="input" id="inputMes" placeholder="MM">
+                    <input type="text" class="input" id="inputMes" placeholder="MM" maxlength="2" minlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
                     <legend class="notificacao">notificação</legend>
                 </label>
                 <label class="label">
                     <legend class="legenda">YEAR</legend>
-                    <input type="number" class="input" id="inputAno" placeholder="YYYY">
+                    <input type="text" class="input" id="inputAno" placeholder="YYYY" maxlength="4" minlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
                     <legend class="notificacao">notificação</legend>
                 </label>
             </div>
 
+            <!-- Segunda Linha -->
             <div class="box-botao">
                 <span class="linha"></span>
                 <a href="#" class="btn-calcular" id="btnCalcular">
@@ -43,18 +45,19 @@
                 </a>
             </div>
 
+            <!-- Terceira Linha -->
             <div class="box-resultado">
                 <label class="label-resultado">
-                    <p class="rs-anos" id="rsAnos">--</p>
-                    <p>YEARS</p>
+                    <p class="valores rs-anos" id="rsAnos">- -</p>
+                    <p>Years</p>
                 </label>
                 <label class="label-resultado">
-                    <p class="rs-meses" id="rsMeses">--</p>
-                    <p>MONTHS</p>
+                    <p class="valores rs-meses" id="rsMeses">- -</p>
+                    <p>Months</p>
                 </label>
                 <label class="label-resultado">
-                    <p class="rs-dias" id="rsDias">--</p>
-                    <p>DAYS</p>
+                    <p class="valores rs-dias" id="rsDias">- -</p>
+                    <p>Days</p>
                 </label>
             </div>
             

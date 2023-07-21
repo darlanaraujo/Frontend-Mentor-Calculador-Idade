@@ -4,6 +4,36 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: Poppins-Regular;
+  src: url(../assets/fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url(../assets/fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: Poppins-ExtraBold;
+  src: url(../assets/fonts/Poppins-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: Poppins-BoldItalic;
+  src: url(../assets/fonts/Poppins-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: Poppins-ExtraBoldItalic;
+  src: url(../assets/fonts/Poppins-ExtraBoldItalic.ttf);
+}
+
+@font-face {
+  font-family: Poppins-Italic;
+  src: url(../assets/fonts/Poppins-Italic.ttf);
+}
+
 .page {
   width: 100%;
   height: 100vh;
@@ -11,17 +41,142 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: Poppins-Regular;
 }
 
 .page .modal {
   width: 840px;
-  height: 680px;
+  max-height: 680px;
   background-color: white;
   border-radius: 15px 15px 250px 15px;
+  margin: 20px;
+  padding: 30px 50px;
+}
+
+@media (max-width: 700px) {
+  .page .modal {
+    padding: 30px;
+    border-radius: 15px 15px 150px 15px;
+  }
 }
 
 .page .modal .box-input {
   display: flex;
-  padding: 30px 40px;
-  gap: 20px;
+  gap: 30px;
+  color: #8b8b8b;
+}
+
+@media (max-width: 500px) {
+  .page .modal .box-input {
+    gap: 10px;
+  }
+}
+
+.page .modal .box-input .legenda {
+  letter-spacing: 1.5px;
+}
+
+.page .modal .box-input .input {
+  width: 160px;
+  height: 70px;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  font-family: Poppins-Bold;
+  font-size: 2em;
+  padding: 20px;
+  transition: 1s all;
+}
+
+@media (max-width: 700px) {
+  .page .modal .box-input .input {
+    width: 100%;
+    height: 55px;
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 500px) {
+  .page .modal .box-input .input {
+    font-size: 1.3em;
+  }
+}
+
+.page .modal .box-input .input:focus {
+  outline: 1px solid #9b00ff;
+}
+
+.page .modal .box-input .notificacao {
+  font-family: Poppins-Italic;
+}
+
+.page .modal .box-input.erro .legenda, .page .modal .box-input.erro .notificacao {
+  color: #ee6678;
+}
+
+.page .modal .box-botao {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.page .modal .box-botao .linha {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background-color: #f0f0f0;
+}
+
+.page .modal .box-botao .btn-calcular {
+  width: 100px;
+  height: 90px;
+  background-color: #9b00ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: .5s all;
+}
+
+@media (max-width: 700px) {
+  .page .modal .box-botao .btn-calcular {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 65px;
+    height: 65px;
+  }
+}
+
+.page .modal .box-botao .btn-calcular:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+.page .modal .box-resultado .label-resultado {
+  display: flex;
+  gap: 10px;
+  font-family: Poppins-ExtraBoldItalic;
+  font-size: 6em;
+  transition: 1s all;
+}
+
+@media (max-width: 700px) {
+  .page .modal .box-resultado .label-resultado {
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 500px) {
+  .page .modal .box-resultado .label-resultado {
+    font-size: 3em;
+  }
+}
+
+.page .modal .box-resultado .label-resultado .valores {
+  color: #9b00ff;
 }
