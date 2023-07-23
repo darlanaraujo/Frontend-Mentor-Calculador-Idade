@@ -19,21 +19,21 @@
     <main class="page">
         <section class="modal">
             <!-- Primeira Linha -->
-            <div class="box-input">
+            <div class="box-input" id="boxInput">
                 <label class="label">
                     <legend class="legenda">DAY</legend>
-                    <input type="text" class="input" id="inputDia" placeholder="DD" maxlength="2" minlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                    <legend class="notificacao">notificação</legend>
+                    <input type="text" class="input" id="input" placeholder="DD" maxlength="2" minlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                    <legend class="notificacao" id="notificacao">This field is required</legend>
                 </label>
                 <label class="label">
                     <legend class="legenda">MONTH</legend>
-                    <input type="text" class="input" id="inputMes" placeholder="MM" maxlength="2" minlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                    <legend class="notificacao">notificação</legend>
+                    <input type="text" class="input" id="input" placeholder="MM" maxlength="2" minlength="2" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                    <legend class="notificacao" id="notificacao">This field is required</legend>
                 </label>
                 <label class="label">
                     <legend class="legenda">YEAR</legend>
-                    <input type="text" class="input" id="inputAno" placeholder="YYYY" maxlength="4" minlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
-                    <legend class="notificacao">notificação</legend>
+                    <input type="text" class="input" id="input" placeholder="YYYY" maxlength="4" minlength="4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                    <legend class="notificacao" id="notificacao">This field is required</legend>
                 </label>
             </div>
 

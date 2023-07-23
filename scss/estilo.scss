@@ -13,7 +13,6 @@
 
     .modal {
         width: 840px;
-        max-height: 680px;
         background-color: white;
         border-radius: 15px 15px 250px 15px;
         margin: 20px;
@@ -66,11 +65,23 @@
 
             .notificacao {
                 font-family: Poppins-Italic;
+                font-size: 13px;
+                display: none;
+                color: $vermelho;
+
+                &.active {
+                    display: block;
+                }
             }
 
             &.erro {
                 .legenda, .notificacao {
                     color: $vermelho;
+                    // display: block;
+                }
+
+                .input {
+                    border-color: $vermelho;
                 }
             }
         }
