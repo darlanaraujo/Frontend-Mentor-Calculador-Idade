@@ -52,10 +52,13 @@ btnCalcular.addEventListener('click', () => {
             notificacoes[0].classList.add('active');
             notificacoes[0].innerHTML = 'Must be a valid day';
         } else {
-            if(dia - diaAtual) {
-                mes = -1;
+            if(dia > diaAtual && mes == 2) {
+                diaOk = (28 - dia) + diaAtual;
+            } else if(dia > diaAtual && mes != 2) {
+                diaOk = (30 - dia) + diaAtual;
+            } else {
+                diaOk = diaAtual - dia;
             }
-            diaOk = diaAtual - dia;
         }
     }
     
@@ -64,7 +67,11 @@ btnCalcular.addEventListener('click', () => {
         notificacoes[1].classList.add('active');
         notificacoes[1].innerHTML = 'Must be a valid month';
     } else {
-        mesOk = mesAtual - mes;
+        if(dia > diaAtual) {
+            mesOk = mesAtual - mes -1;
+        } else {
+            mesOk = mesAtual - mes;
+        }
     }
 
     if(ano.length < 4) {
@@ -80,7 +87,9 @@ btnCalcular.addEventListener('click', () => {
     }
 
 
-    if(diaOk != undefined && mesOk != undefined && anoOk != undefined) {
+    if(dia > diaAtual && mes >= mesAtual && ano >= anoAtual) {
+        alert('Essa pessoa ainda não nasceu!');
+    } else if(diaOk != undefined && mesOk != undefined && anoOk != undefined) {
         rsAnos.innerHTML = anoOk;
         rsMeses.innerHTML = mesOk;
         rsDias.innerHTML = diaOk;
